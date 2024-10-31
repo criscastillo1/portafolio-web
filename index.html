@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio de Cristopher Jafet Castillo Aguilar</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* Estilos adicionales para la sección de intereses */
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    .loading-message {
+      display: none;
+      margin-top: 10px;
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+    .skill-bar {
+      background-color: #e0e0e0;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 25px;
+      position: relative;
+    }
+
+    .skill-progress {
+      height: 100%;
+      background-color: #05fff2;
+      width: 0; /* Inicialmente en 0 */
+      transition: width 0.5s; /* Transición suave */
+    }
+
+    .interests {
+      text-align: center; /* Centrar el texto */
+      margin: 40px 0; /* Espacio superior e inferior */
+    }
+
+    .interests-container {
+      display: flex; /* Usar flexbox para alinear los elementos */
+      justify-content: center; /* Centrar elementos horizontalmente */
+      flex-wrap: wrap; /* Permitir que los elementos se muevan a la siguiente línea */
+    }
+
+    .interest-item {
+      margin: 10px; /* Espacio entre los ítems */
+      padding: 10px; /* Espacio interno */
+      border: 1px solid #e0e0e0; /* Borde de los ítems */
+      border-radius: 5px; /* Bordes redondeados */
+      width: 100px; /* Ancho fijo para los ítems */
+      transition: transform 0.3s; /* Transición suave para el hover */
+    }
+
+    .interest-item:hover {
+      transform: scale(1.05); /* Escalar al pasar el mouse */
+    }
+
+    .interest-item a {
+      text-decoration: none; /* Sin subrayado en los enlaces */
+      color: #333; /* Color del texto */
+      display: flex; /* Flexbox para el icono y el texto */
+      flex-direction: column; /* Colocar icono arriba y texto abajo */
+      align-items: center; /* Centrar los elementos */
+    }
+
+    .interest-item i {
+      font-size: 24px; /* Tamaño del icono */
+      margin-bottom: 5px; /* Espacio entre el icono y el texto */
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="navbar">
+      <h2 class="brand">Mi Portafolio</h2>
+      <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#intereses">Intereses</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </header>
+
+    <section class="main">
+      <div>
+        <div class="profile-description">
+          <h1>Bienvenido a mi Portafolio</h1>
+          <p>Hola, soy Cristopher Jafet Castillo Aguilar. Actualmente soy estudiante de último año de informática, y tengo una sólida experiencia en mantenimiento preventivo y correctivo de sistemas. Me considero una persona autodidacta, apasionada y con una gran capacidad para aprender rápidamente. Estoy emocionado por los desafíos que me ofrece el mundo de la tecnología y siempre busco mejorar mis habilidades para contribuir de manera significativa.</p>
+        </div>
+        <a href="cv.pdf" download>
+          <button class="download-cv" id="downloadBtn">Descargar CV</button>
+        </a>
+        <div class="loading-message" id="loadingMessage">Descargando, espere...</div>
+      </div>
+      <img src="img/guapo.jpg" alt="Mi imagen personal" loading="lazy">
+    </section>
+
+    <section class="portfolio" id="proyectos">
+      <div class="portfolio-heading">
+        <h2>Proyectos</h2>
+      </div>
+      <div class="container">
+        <!-- Tarjetas de proyectos -->
+        <div class="card">
+          <div class="card__img" style="background-image: url('img/proyyecto.jpg');"></div>
+          <div class="card__title">ProHands: Sistema de Prótesis Robótica con Arduino</div>
+          <div class="card__description">
+            <p>Descripción del proyecto: Este proyecto se centra en la creación de una prótesis funcional y accesible utilizando componentes económicos.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img" style="background-image: url('img/Imagen de WhatsApp 2024-10-23 a las 16.16.49_0679d37c.jpg');"></div>
+          <div class="card__title">Instalación de cámaras</div>
+          <div class="card__description">
+            <p>En este proyecto hice la instalación de cámaras en mi práctica profesional en los cuales tomé las medidas y preparé todo el cableado.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img" style="background-image: url('img/Imagen de WhatsApp 2024-10-23 a las 16.17.18_d4deee38.jpg');"></div>
+          <div class="card__title">Limpieza de IDF</div>
+          <div class="card__description">
+            <p>En este proyecto hice la reconexión de cables para los distintos puertos usados por los usuarios de la empresa.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img" style="background-image: url('img/image11.png');"></div>
+          <div class="card__title">Página web utilizando CSS</div>
+          <div class="card__description">
+            <p>En este proyecto trabajé en mi página web sobre lo que más me gusta con HTML y CSS.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img" style="background-image: url('img/image2.png');"></div>
+          <div class="card__title">Proyecto web 2 utilizando programación</div>
+          <div class="card__description">
+            <p>En este proyecto trabajé en mi página utilizando métodos básicos, creando una página de mascotas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experiencia">
+      <h2>Práctica profesional</h2>
+      <div class="experience-container">
+        <div class="experience-item">
+          <img src="img/H.png" alt="Experiencia 1">
+          <p>Durante la práctica profesional en Tegra Global Honduras, se adquirieron y aplicaron habilidades técnicas en el área de IT, participando en la instalación y configuración de equipos, respaldo de información y soporte técnico.</p>
+        </div>
+        <div class="experience-item">
+          <img src="img/imagse1.png" alt="Experiencia 2">
+          <p>Durante la práctica profesional en Tegra Global Honduras, se adquirieron conocimientos prácticos en sistemas de refrigeración, incluyendo la instalación, mantenimiento y reparación de equipos. Se desarrollaron habilidades en diagnóstico de fallas y optimización del rendimiento de sistemas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="skills-container">
+        <div class="skill" onmouseover="fillBar(this)" onmouseout="resetBar(this)">
+          <span>Programación</span>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 85%;">85%</div>
+          </div>
+        </div>
+        <div class="skill" onmouseover="fillBar(this)" onmouseout="resetBar(this)">
+          <span>Mantenimiento de equipos</span>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 90%;">90%</div>
+          </div>
+        </div>
+        <div class="skill" onmouseover="fillBar(this)" onmouseout="resetBar(this)">
+          <span>Soporte técnico</span>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 80%;">80%</div>
+          </div>
+        </div>
+        <div class="skill" onmouseover="fillBar(this)" onmouseout="resetBar(this)">
+          <span>Robótica</span>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 75%;">75%</div>
+          </div>
+        </div>
+        <div class="skill" onmouseover="fillBar(this)" onmouseout="resetBar(this)">
+          <span>Diseño Gráfico</span>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 70%;">70%</div>
+          </div>
+        </div>
+        <div class="skill" onmouseover="fillBar(this)" onmouseout="resetBar(this)">
+          <span>Bases de Datos</span>
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 65%;">65%</div>
+          </div>
+        </div>
+        <div class="skill" onmouseover="fillBar(this)" onmouseout="resetBar(this)">
+          <span>Redes</span>
+          
+          <div class="skill-bar">
+            <div class="skill-progress" style="width: 75%;">75%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="interests" id="intereses">
+      <div class="interest-box">
+        <h2>Intereses</h2>
+        <p class="interest-description">
+          Estoy apasionado por la programación, ya que me permite crear soluciones innovadoras. 
+          También disfruto de los videojuegos. Además, me fascina la tecnología y cómo transforma 
+          nuestra forma de interactuar con el mundo. El cine es otra de mis grandes pasiones, 
+          aprecio las narrativas y la creatividad detrás de cada película. Por último, los deportes 
+          son una excelente manera de mantenerme activo y disfrutar del trabajo en equipo.
+        </p>
+      </div>
+      <div class="interests-container">
+        <div class="interest-item">
+          <a href="https://www.oracle.com/java/" target="_blank">
+            <i class="fab fa-java"></i>
+            <span>Java</span>
+          </a>
+        </div>
+        <div class="interest-item">
+          <a href="https://www.ign.com/games" target="_blank">
+            <i class="fas fa-gamepad"></i>
+            <span>Juegos</span>
+          </a>
+        </div>
+        <div class="interest-item">
+          <a href="https://www.ford.com/trucks/raptor/" target="_blank">
+            <i class="fas fa-car"></i>
+            <span>Ford Raptor</span>
+          </a>
+        </div>
+        <div class="interest-item">
+          <a href="https://www.lonelyplanet.com/" target="_blank">
+            <i class="fas fa-plane"></i>
+            <span>Viajes</span>
+          </a>
+        </div>
+        <div class="interest-item">
+          <a href="https://www.fifa.com/" target="_blank">
+            <i class="fas fa-futbol"></i>
+            <span>Fútbol</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="contact-section" id="contacto">
+      <h2>Contacto</h2>
+      <form id="formContacto" action="guardar_mensaje.php" method="post" novalidate>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        <button type="submit">Enviar</button>
+      </form>
+      <script>
+        // Maneja el envío del formulario de manera asíncrona
+        document.getElementById('formContacto').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            fetch('guardar_mensaje.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert("¡Mensaje enviado con éxito!");
+                window.location.hash = '#contacto';
+            })
+            .catch(error => {
+                console.error('Error al enviar el formulario:', error);
+            });
+        });
+
+        // Maneja la descarga del CV
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+          document.getElementById('loadingMessage').style.display = 'block';
+          setTimeout(() => {
+            window.location.href = this.parentElement.href;
+          }, 1000);
+        });
+
+        // Funciones para llenar y resetear las barras de habilidades
+        function fillBar(skill) {
+          const progressBar = skill.querySelector('.skill-progress');
+          progressBar.style.width = progressBar.innerText; // Ajusta al porcentaje mostrado
+        }
+
+        function resetBar(skill) {
+          const progressBar = skill.querySelector('.skill-progress');
+          progressBar.style.width = '0'; // Reinicia a 0 al quitar el puntero
+        }
+      </script>
+      <div class="social-networks">
+        <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+
+/* Reset de márgenes y padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Asegura que el padding y el borde no afecten el ancho total */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif; /* Fuente principal */
+  background: url('img/s.png') no-repeat center center fixed; /* Fondo de la imagen */
+  background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+  color: #eee; /* Color del texto */
+  text-align: center; /* Centrar el texto del cuerpo */
+  overflow-x: hidden; /* Evitar el scroll horizontal */
+}
+
+.wrapper {
+  width: 100vw; /* Ancho completo de la ventana */
+  height: auto;
+  background-color: rgba(17, 17, 17, 0.8); /* Fondo semitransparente para mejor legibilidad */
+  display: flex;
+  flex-direction: column; /* Disposición en columna */
+  align-items: center; /* Centrar el contenido horizontalmente */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Espacio entre elementos del menú */
+  align-items: center; /* Centrar verticalmente */
+  padding: 2em;
+  background-color: #222; /* Fondo del navbar */
+  width: 100%; /* Ancho completo */
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff; /* Sombra de neón */
+}
+
+.brand {
+  color: #00ffff; /* Color del texto de la marca */
+}
+
+.menu {
+  display: flex; /* Disposición horizontal del menú */
+  justify-content: space-around;
+  width: 50%; /* Ancho del menú */
+}
+
+.menu li {
+  list-style: none; /* Eliminar viñetas de lista */
+}
+
+.menu a {
+  color: #fff; /* Color del texto del menú */
+  text-decoration: none; /* Sin subrayado */
+  padding: 10px 20px; /* Espaciado interno */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para el color */
+}
+
+.menu a:hover {
+  background-color: rgba(23, 245, 245, 0.3); /* Fondo azul claro al pasar el mouse */
+  color: #000; /* Cambiar color de texto a negro */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.main {
+  display: flex;
+  justify-content: center; /* Centrar contenido horizontalmente */
+  align-items: center; /* Centrar contenido verticalmente */
+  padding: 100px 0; /* Espaciado vertical */
+  flex-direction: column; /* Disposición en columna */
+}
+
+.main img {
+  width: 300px; /* Ancho de la imagen */
+  border: 5px solid #00ffff; /* Borde de la imagen */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: transform 0.3s; /* Transición para escalado */
+  margin-top: 20px; /* Margen superior */
+}
+
+.main img:hover {
+  transform: scale(1.05); /* Escalar imagen al pasar el mouse */
+}
+
+.portfolio, .experience, .skills, .goals, .contact-section {
+  padding: 50px 0; /* Espaciado vertical */
+  width: 100%; /* Ancho completo */
+  text-align: center; /* Centrar texto */
+}
+
+.portfolio-heading, .experience-heading, .skills-heading, .goals-heading, .contact-heading {
+  text-align: center; /* Centrar encabezados */
+  margin-bottom: 30px; /* Margen inferior */
+}
+
+.portfolio h2, .experience h2, .skills h2, .goals h2, .contact h2 {
+  color: #00ffff; /* Color de los títulos */
+}
+
+.container {
+  display: flex; /* Disposición en fila */
+  flex-wrap: wrap; /* Permitir que los elementos se ajusten a nuevas líneas */
+  justify-content: center; /* Centrar elementos */
+  gap: 20px; /* Espacio entre tarjetas */
+}
+
+.card {
+  background-color: #222; /* Fondo de la tarjeta */
+  border: 1px solid #00ffff; /* Borde de la tarjeta */
+  border-radius: 10px; /* Bordes redondeados */
+  width: 300px; /* Ancho de la tarjeta */
+  box-shadow: 0 0 20px #00ffff; /* Sombra de neón */
+  transition: transform 0.3s; /* Transición para escalado */
+  margin: 10px; /* Margen entre tarjetas */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Escalar tarjeta al pasar el mouse */
+}
+
+.card__img {
+  height: 200px; /* Altura de la imagen de la tarjeta */
+  background-size: cover; /* Cubrir el área de la imagen */
+  border-top-left-radius: 10px; /* Bordes redondeados en la esquina superior izquierda */
+  border-top-right-radius: 10px; /* Bordes redondeados en la esquina superior derecha */
+}
+
+.card__title {
+  padding: 10px; /* Espaciado interno del título */
+  font-weight: bold; /* Texto en negrita */
+  color: #00ffff; /* Color del título */
+}
+
+.card__description {
+  padding: 10px; /* Espaciado interno de la descripción */
+  color: #00ffff; /* Color de la descripción */
+}
+
+.experience-container {
+  display: flex; /* Disposición en fila */
+  flex-wrap: wrap; /* Permitir ajuste de elementos */
+  justify-content: center; /* Centrar elementos */
+  gap: 20px; /* Espacio entre elementos */
+}
+
+.experience-item {
+  margin: 10px; /* Margen entre elementos */
+  background-color: #222; /* Fondo del elemento de experiencia */
+  border: 1px solid #00ffff; /* Borde del elemento */
+  border-radius: 10px; /* Bordes redondeados */
+  width: 300px; /* Ancho del elemento */
+  box-shadow: 0 0 20px #00ffff; /* Sombra de neón */
+  padding: 10px; /* Espaciado interno */
+  text-align: center; /* Centrar texto */
+  font-family: 'Times New Roman', Times, serif; /* Fuente del texto */
+}
+
+.experience-item img {
+  width: 100%; /* Ancho completo de la imagen */
+  border-radius: 10px; /* Bordes redondeados en la imagen */
+}
+
+/* Estilo para las barras de habilidades */
+.skills-container {
+  max-width: 600px; /* Ancho máximo de la sección de habilidades */
+  margin: 20px auto; /* Margen vertical */
+}
+
+.skill {
+  margin: 15px 0; /* Margen vertical para cada habilidad */
+}
+
+.skill-bar {
+  background-color: #ddd; /* Fondo de la barra de habilidad */
+  border-radius: 5px; /* Bordes redondeados */
+  overflow: hidden; /* Ocultar el desbordamiento */
+}
+
+.skill-progress {
+  background-color: #00ffff; /* Color de la barra */
+  height: 20px; /* Altura de la barra */
+  color: #000; /* Color del texto dentro de la barra */
+  text-align: center; /* Centrar texto horizontalmente */
+  line-height: 20px; /* Centrar texto verticalmente */
+  font-weight: bold; /* Hacer el texto más grueso */
+}
+
+.goals {
+  text-align: center; /* Centrar texto */
+}
+
+.contact-section {
+  text-align: center; /* Centrar texto */
+}
+
+.contact-section form {
+  display: inline-block; /* Mostrar el formulario en línea */
+  background-color: #222; /* Fondo del formulario */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 20px #00ffff; /* Sombra de neón */
+}
+
+.contact-section label {
+  display: block; /* Mostrar etiquetas como bloques */
+  margin: 10px 0; /* Margen vertical */
+}
+
+.contact-section input, 
+.contact-section textarea {
+  width: 100%; /* Ancho completo de los campos */
+  padding: 10px; /* Espaciado interno */
+  margin-bottom: 10px; /* Margen inferior */
+  border: 1px solid #00ffff; /* Borde de los campos */
+  border-radius: 5px; /* Bordes redondeados */
+  background: #333; /* Fondo de los campos */
+  color: #07ffff; /* Color del texto */
+}
+
+.contact-section button {
+  background-color: #00ffff; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  color: #000; /* Color del texto */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  cursor: pointer; /* Cambiar cursor al pasar por encima */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Transición para el color de fondo */
+}
+
+.contact-section button:hover {
+  background-color: #00ccff; /* Color de fondo al pasar el mouse */
+}
+
+.social-networks {
+  margin-top: 20px; /* Margen superior */
+}
+
+.social-networks a {
+  color: #00ffff; /* Color de los enlaces */
+  margin: 0 10px; /* Margen horizontal */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 24px; /* Tamaño de fuente para iconos */
+  padding: 10px; /* Espaciado alrededor del icono */
+  border-radius: 50%; /* Bordes redondeados para un efecto de botón */
+  background-color: rgba(0, 255, 255, 0.2); /* Fondo semitransparente */
+  box-shadow: 0 4px 10px rgba(0, 255, 255, 0.5); /* Sombra para efecto 3D */
+  transition: transform 0.3s, background-color 0.3s; /* Transición suave */
+}
+
+.social-networks a:hover {
+  background-color: rgba(0, 255, 255, 0.5); /* Fondo al pasar el mouse */
+  transform: translateY(-3px); /* Elevar icono al pasar el mouse */
+}
+
+.download-cv {
+  background-color: #00ffff; /* Color de fondo */
+  border: none; /* Sin borde */
+  color: #000; /* Color del texto */
+  padding: 10px 20px; /* Espaciado interno */
+  cursor: pointer; /* Cambiar cursor al pasar por encima */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s; /* Transición para el color de fondo */
+  margin-top: 20px; /* Espacio entre la descripción y el botón */
+}
+
+.download-cv:hover {
+  background-color: #00ccff; /* Color al pasar el mouse */
+}
+
+.profile-description {
+  background-color: rgba(0, 255, 255, 0.1); /* Fondo semitransparente */
+  border: 2px solid #00ffff; /* Borde color neón */
+  border-radius: 10px; /* Esquinas redondeadas */
+  padding: 20px; /* Espacio interno */
+  box-shadow: 0 0 20px #00ffff; /* Sombra de neón */
+  color: #00ffff; /* Color del texto */
+  font-size: 18px; /* Tamaño del texto */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transiciones para efectos */
+  font-family: 'Times New Roman', Times, serif; /* Fuente del texto */
+}
+
+.profile-description h1 {
+  color: #00ffff; /* Color del título */
+}
+
+.profile-description p {
+  color: #eee; /* Color del párrafo */
+}
+
+/* Nueva sección de intereses */
+.interests {
+  padding: 50px 20px; /* Asegúrate de que el padding no sea muy pequeño */
+  text-align: center; /* Centrar texto */
+  min-height: 300px; /* Altura mínima para asegurar que se muestre el contenido */
+}
+
+.interests h2 {
+  color: #00ffff; /* Color del título */
+  margin-bottom: 30px; /* Margen inferior */
+  text-shadow: 0 0 10px white, 0 0 20px white; /* Resplandor blanco */
+}
+
+.interest-item {
+  display: inline-block; /* Permitir que los elementos se alineen horizontalmente */
+  margin: 10px; /* Margen entre elementos */
+  padding: 15px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 18px; /* Tamaño de la fuente */
+  color: #fff; /* Color del texto */
+  font-weight: bold; /* Hacer el texto más grueso */
+  transition: transform 0.3s, background-color 0.3s; /* Transiciones suaves */
+}
+
+.interest-item:hover {
+  transform: scale(1.05); /* Escalar al pasar el mouse */
+}
+
+/* Colores aleatorios para los elementos */
+.interest-item:nth-child(1) { background-color: #FF5733; } /* Rojo */
+.interest-item:nth-child(2) { background-color: #33FF57; } /* Verde */
+.interest-item:nth-child(3) { background-color: #3357FF; } /* Azul */
+.interest-item:nth-child(4) { background-color: #F1C40F; } /* Amarillo */
+.interest-item:nth-child(5) { background-color: #9B59B6; } /* Púrpura */
+.interest-item:nth-child(6) { background-color: #E67E22; } /* Naranja */
+
+/* Estilos para los modales */
+.modal {
+  display: none; /* Ocultar por defecto */
+  position: fixed; /* Posición fija para el modal */
+  z-index: 1; /* Asegurar que esté por encima de otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  overflow: auto; /* Permitir desplazamiento */
+  background-color: rgb(0, 0, 0); /* Fondo negro */
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo negro con opacidad */
+}
+
+.modal-content {
+  background-color: #222; /* Fondo del contenido del modal */
+  margin: 15% auto; /* Margen superior e inferior automático */
+  padding: 20px; /* Espaciado interno */
+  border: 1px solid #00ffff; /* Borde color neón */
+  width: 80%; /* Ancho del modal */
+  max-width: 500px; /* Ancho máximo */
+  color: #fff; /* Color del texto */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+.close {
+  color: #fff; /* Color del botón de cierre */
+  float: right; /* Alinear a la derecha */
+  font-size: 28px; /* Tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+}
+
+.close:hover,
+.close:focus {
+  color: #00ffff; /* Color al pasar el mouse */
+  text-decoration: none; /* Sin subrayado */
+  cursor: pointer; /* Cambiar cursor al pasar por encima */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Coloca el menú verticalmente */
+    padding: 1em;
+  }
+
+  .menu {
+    width: 100%; /* Ancho completo para el menú */
+    justify-content: center; /* Centrar elementos del menú */
+  }
+
+  .container {
+    flex-direction: column; /* Colocar las tarjetas en columna */
+    align-items: center; /* Centrar tarjetas */
+  }
+
+  .card {
+    width: 90%; /* Ancho ajustado para tarjetas */
+  }
+
+  .main img {
+    width: 200px; /* Disminuir el tamaño de la imagen */
+  }
+
+  .profile-description {
+    font-size: 16px; /* Ajustar tamaño de fuente */
+  }
+
+  .skills-container {
+    max-width: 100%; /* Ancho máximo en móviles */
+  }
+}
+
+img {
+  max-width: 100%; /* Asegura que las imágenes sean responsivas */
+  height: auto; /* Mantener proporción */
+}
+
+.interests h2 {
+  color: #00ffff; /* Color del título */
+  margin-bottom: 30px; /* Margen inferior */
+  text-shadow: 0 0 10px white, 0 0 20px white; /* Resplandor blanco */
+}
+
+.interest-description {
+  color: #ffffff; /* Color del texto */
+  margin-top: 20px; /* Espacio superior */
+  font-size: 16px; /* Tamaño de fuente */
+  line-height: 1.5; /* Altura de línea para mejor legibilidad */
+  max-width: 800px; /* Ancho máximo para mejor legibilidad */
+  margin-left: auto; /* Centrar */
+  margin-right: auto; /* Centrar */
+  font-weight: 600; /* Aumentar grosor de la letra */
+}
